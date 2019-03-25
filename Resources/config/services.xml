@@ -23,7 +23,7 @@
             <argument>%lexik_currency.decimal_part.round_mode%</argument>
         </service>
 
-        <service id="lexik_currency.formatter" class="%lexik_currency.formatter.class%">
+        <service id="lexik_currency.formatter" class="%lexik_currency.formatter.class%" public="true">
             <argument>%locale%</argument>
         </service>
 
