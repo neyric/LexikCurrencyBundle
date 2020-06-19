@@ -77,5 +77,7 @@ class ImportCurrencyCommand extends Command
         }
 
         $em->flush();
+
+        return 0;
     }
 }
