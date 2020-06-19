@@ -4,7 +4,7 @@ namespace Lexik\Bundle\CurrencyBundle\EventListener;
 
 use Lexik\Bundle\CurrencyBundle\Currency\FormatterInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
@@ -38,9 +38,9 @@ class LocaleListener implements EventSubscriberInterface
     }
 
     /**
-     * @param GetResponseEvent $event
+     * @param RequestEvent $event
      */
-    public function setCurrencyFormatterLocale(GetResponseEvent $event)
+    public function setCurrencyFormatterLocale(RequestEvent $event)
     {
         $request = $event->getRequest();
 
